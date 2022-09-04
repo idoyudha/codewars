@@ -3,15 +3,14 @@
 
 class Solution(object):
     def fib(self, n):
-        if n == 0 or n == 1:
-            return n
+        if n <= 2: return 1
 
         return self.fib(n-1) + self.fib(n-2)
 
     def fibWithMemo(self, n, memo={}):
         if n in memo: return memo[n]
 
-        if n == 0 or n == 1: return n 
+        if n <= 2: return 1
         
         memo[n] = self.fibWithMemo(n-1, memo) + self.fibWithMemo(n-2, memo)
         return memo[n]
@@ -19,7 +18,7 @@ class Solution(object):
 
 obj = Solution()
 
-num = 40 # 
+num = 50 # 
 # 0 1 1 2 3 5
 
 result = obj.fibWithMemo(num)
