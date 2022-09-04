@@ -1,0 +1,1 @@
+# Given set of substrings, what are the possible ways to construct the string 'potenpot'?
